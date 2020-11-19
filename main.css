@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: roboto, sans-serif;
+    --primary: #222831;
+    --secondary: #eeeeee;
+    --tertiary: white;
+    --input: #393e46;
+    --inputText: #eeeeee;
+}
+
+body {
+
+    background-color: var(--primary);
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    padding: .5rem;
+    background-color: var(--input);
+    color: white;
+    font-family: roboto, sans-serif;
+    margin-top: .25rem;
+}
+
+textarea {
+    color: white;
+    font-family: roboto, sans-serif;
+    background-color: var(--input);
+    outline: none;
+    border: none;
+    resize: none;
+    margin-top: .25rem;
+}
+
+h2 {
+    color: white;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    color: gray;
+}
+
+button {
+    font-weight: bolder;
+}
+
+.add-list {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.error {
+    display: none;
+    font-size: 13px;
+    padding: .2rem;
+    text-align: left;
+    padding-bottom: 0;
+    color: #e63946;
+}
+
+.list {
+    position: relative;
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.list input {
+    display: none;
+}
+
+.list textarea {
+    display: none;
+}
+
+.list .add-card {
+    display: none;
+}
+
+.list-container {
+    width: 100%;
+
+    display: flex;
+    position: relative;
+}
+
+
+.list-container div {
+    /*    margin: .5rem;*/
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+    margin-right: .4rem;
+}
+
+.list h2::after {
+    content: '';
+    margin: .5rem;
+    margin-right: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background-image: url(trash.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    pointer-events: all;
+}
+
+.list h2 {
+    margin-bottom: .5rem;
+    pointer-events: none;
+    width: 13rem;
+}
+
+.card {
+    max-height: 10rem;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    background-color: #eeeeee;
+    border-radius: .25rem;
+    width: 100%;
+    overflow: auto;
+}
+
+.dateText {
+    pointer-events: none;
+    font-size: 14px
+}
+
+.card p:last-of-type {
+    color: gray;
+    margin-bottom: .4rem;
+    pointer-events: none;
+}
+
+.card h2 {
+    pointer-events: none;
+    padding-top: .4rem;
+    font-size: 20px;
+    color: black;
+}
+
+.dateText {
+    color: #eeeeee;
+    margin: auto;
+    padding: .1rem;
+    background-color: var(--input);
+    margin-bottom: .4rem;
+}
+
+h2 {
+    pointer-events: none;
+}
+
+.card h2::after {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card:hover h2::after {
+    padding-right: .4rem;
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.3s ease all;
+    filter: grayscale(0%);
+    pointer-events: all;
+}
+
+.date {
+    background-color: teal;
+}
+
+.fall {
+    overflow: hidden;
+    transform: rotateX(30deg) translateY(4.5rem);
+    opacity: 0;
+    transition: 0.8s ease all;
+}
+
+.fall::after {
+    content: '✔️';
+    position: absolute;
+    top: 30%;
+    font-size: 20px;
+    text-align: center;
+    color: lawngreen;
+    animation-name: fade;
+    animation-duration: .4s;
+}
+
+.completed {
+    background-color: var(--input);
+}
+
+.completed h2 {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.completed .dateText {
+    color: gray;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fade {
+    0% {
+        transform: translateX(4rem) scale(.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0rem) scale(1.5);
+        opacity: 1;
+    }
+}

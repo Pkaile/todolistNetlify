@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+           <div class="add-list">
+            <input type="text" data-list-name placeholder="Enter a list Title" class="list-title">
+            <button data-add-list>+</button>
+            </div>
+    <div class="board">
+        <div class="card-lists" data-card-lists>
+
+        </div>
+        <div class="list-container" data-list-container>
+            <div class="lists" data-lists></div>
+        </div>
+    </div>
+    
+       <template class="" data-list-template>
+     
+       <div class="list">
+        <h2 data-list-title></h2>
+        <input type="text" placeholder="Card title" data-card-title-input>
+        <p class="error" data-title-error>*Error please enter a title</p>
+        <input type="date" data-card-date-input>
+        <textarea name="description" cols="30" rows="7" data-card-desc-input></textarea>
+        <button  type="submit" onClick= addCardButton(event) data-add-card-to-list-button>Add Card</button>
+     
+             <h3 data-card-title></h3>
+        <p data-card-desc></p>
+        <p data-card-date></p>
+        </div>
+    </template>
+    <script src="index.js"></script>
+</body>
+</html>
