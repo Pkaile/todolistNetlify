@@ -6,7 +6,6 @@
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
     --primary: #222831;
     --secondary: #eeeeee;
     --tertiary: white;
@@ -15,7 +14,7 @@ html {
 }
 
 body {
-
+    font-family: 'Roboto', sans-serif;
     background-color: var(--primary);
 }
 
@@ -107,6 +106,7 @@ button {
     position: relative;
 }
 .desc-tag{
+margin-bottom: .2rem;
 margin-left: .2rem;
 margin-right: .2rem;
 }
