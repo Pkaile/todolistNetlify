@@ -6,7 +6,7 @@
 }
 
 html {
-    font-family: roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     --primary: #222831;
     --secondary: #eeeeee;
     --tertiary: white;
@@ -26,13 +26,13 @@ input {
     padding: .5rem;
     background-color: var(--input);
     color: white;
-    font-family: roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin-top: .25rem;
 }
 
 textarea {
     color: white;
-    font-family: roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--input);
     outline: none;
     border: none;
@@ -106,10 +106,12 @@ button {
     display: flex;
     position: relative;
 }
-
+.desc-tag{
+margin-left: .2rem;
+margin-right: .2rem;
+}
 
 .list-container div {
-    /*    margin: .5rem;*/
     margin-top: .4rem;
     margin-bottom: .4rem;
     margin-right: .4rem;

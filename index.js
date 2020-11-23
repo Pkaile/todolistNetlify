@@ -96,6 +96,7 @@ function renderLists() {
             cardTitl.innerText = list.cards[i].name;
             cardDiv.id = list.cards[i].id;
             cardTitl.id = list.id;
+            cardDesc.classList.add('desc-tag');
             cardDesc.innerText = list.cards[i].desc;
             if (list.cards[i].completed) {
                 cardDiv.classList.add('completed');
